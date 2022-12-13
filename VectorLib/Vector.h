@@ -31,15 +31,15 @@ public:
   T& at(size_t indx);
   const T& at(size_t indx) const;
 
-  bool operator==(const TDynamicVector& v) const noexcept;
-  bool operator!=(const TDynamicVector& v) const noexcept;
+  bool operator==(const TDynamicVector<T>& v) const noexcept;
+  bool operator!=(const TDynamicVector<T>& v) const noexcept;
 
-  TDynamicVector operator+(T value);
-  TDynamicVector operator-(T value);
-  TDynamicVector operator*(T value);
+  TDynamicVector<T> operator+(T value);
+  TDynamicVector<T> operator-(T value);
+  TDynamicVector<T> operator*(T value);
 
-  TDynamicVector operator+(const TDynamicVector& v);
-  TDynamicVector operator-(const TDynamicVector& v);
+  TDynamicVector<T> operator+(const TDynamicVector<T>& v);
+  TDynamicVector<T> operator-(const TDynamicVector<T>& v);
   T operator*(const TDynamicVector& v);
 
   friend istream& operator>>(istream& istr, TDynamicVector& v) 
